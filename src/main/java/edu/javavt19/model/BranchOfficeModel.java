@@ -1,7 +1,7 @@
 package edu.javavt19.model;
 
-import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
@@ -9,13 +9,14 @@ import java.io.Serializable;
 @Entity
 @Table(name = "branch_office")
 @NamedQuery(name = "insurance_type.findAll", query = "select c from BranchOfficeModel c")
-public class BranchOfficeModel {
+public class BranchOfficeModel implements Serializable{
     @Id
+    //не допускает пустые значения, но может быть пуст
     @NotNull
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
-    //не допускает пустые значения, но может быть пуст
-    @NotNull
+
+    @NotEmpty
     @Size(max=512)
     @Column(unique=true, nullable=false)
     private String name;
