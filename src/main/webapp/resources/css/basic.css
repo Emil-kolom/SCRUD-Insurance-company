@@ -2,3 +2,7 @@
     padding: 0.75rem 0;
     background-color: #2aeaf1;
 }
+.cols .col-md {
+    margin-bottom: 20px;
+    text-align: center;
+}

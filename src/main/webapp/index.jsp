@@ -15,29 +15,29 @@
         <div class="col-lg-8 col-lg-offset-2">
             <div class="container-fluid" id="index_jumbotron">
                 <div class="text-center"><h1>CRUD operations</h1></div>
-                <p class="lead text-center text-nowrap">CRUD is the 4 basic operations of data management: create, read, update, delete</p>
+                <p class="lead text-center text-wrap">CRUD is the 4 basic operations of data management: create, read, update, delete</p>
             </div>
             <div class="cols">
                 <div class="row">
                     <div class="col-md">
                         <img class="img-rounded" src="/resources/img/hiber.png" alt="hibernate logo" width="140" height="140">
                         <p>Main table containing all insurance contracts of the company.</p>
-                        <p><a class="btn btn-primary" href="/hibernate" role="button">View contracts</a></p>
+                        <p><a class="btn btn-primary" href="/contracts" role="button">View contracts</a></p>
                     </div>
                     <div class="col-md">
                         <img class="img-rounded" src="/resources/img/hiber.png" alt="hibernate logo" width="140" height="140">
                         <p>A table containing a list of all insurance agents working for the company.</p>
-                        <p><a class="btn btn-primary" href="/hibernate" role="button" >View agents</a></p>
+                        <p><a class="btn btn-primary" href="/agents" role="button" >View agents</a></p>
                     </div>
                     <div class="col-md">
-                        <img class="img-rounded" src="/resources/img/hiber.png" alt="hibernate logo" width="140" height="140">
+                        <img class="img-rounded" src="/resources/img/branch_office.png" alt="Office img" width="140" height="140">
                         <p>A table containing data on all branches of the company.</p>
-                        <p><a class="btn btn-primary" href="/hibernate" role="button" >View branches</a></p>
+                        <p><a class="btn btn-primary" href="/branches" role="button" >View branches</a></p>
                     </div>
                     <div class="col-md">
-                        <img class="img-rounded" src="/resources/img/hiber.png" alt="hibernate logo" width="140" height="140">
+                        <img class="img-rounded" src="/resources/img/type_insurance.jpg" alt="Type insurance img" width="140" height="140">
                         <p>A table containing the types of insurance provided by the company.</p>
-                        <p><a class="btn btn-primary" href="/hibernate" role="button"  >View types of insurance</a></p>
+                        <p><a class="btn btn-primary" href="/type" role="button"  >View types of insurance</a></p>
                     </div>
                 </div>
             </div>
