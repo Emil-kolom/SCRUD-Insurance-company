@@ -27,8 +27,8 @@
                     </div>
                 </div>
                 <div class="alert alert-info" role="alert">
-                    <a class="btn btn-primary" role="button" href="/${instrument}/pdfReport?view=pdfView" target="_blank">Download PDF report</a>
-                    <a class="btn btn-primary" role="button" href="/${instrument}/xlsxReport.xlsx?view=excelView" target="_blank">Download Excel report</a>
+                    <a class="btn btn-primary" role="button" href="/${page}/pdfReport?view=pdfView" target="_blank">Download PDF report</a>
+                    <a class="btn btn-primary" role="button" href="/${page}/xlsxReport.xlsx?view=excelView" target="_blank">Download Excel report</a>
                 </div>
                 <div class="card-body">
                     <div class="panel panel-info">
@@ -50,15 +50,15 @@
                                     <td class="founded-year">${brand.foundedYear}</td>
                                     <td class="headquarter">${brand.headquarter}</td>
                                     <td class="action">
-                                        <a href="/${instrument}/edit-brand/${brand.idBrand}">Edit</a>
+                                        <a href="/${page}/edit-brand/${brand.idBrand}">Edit</a>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="/${instrument}/delete-brand/${brand.idBrand}">Delete</a>
+                                        <a href="/${page}/delete-brand/${brand.idBrand}">Delete</a>
                                     </td>
                                 </tr>
                             </c:forEach>
                             </tbody>
                         </table>
-                        <div class="panel-footer"><a class="btn btn-info" role="button" href="/${instrument}/newBrand">Add new brand &raquo</a></div>
+                        <div class="panel-footer"><a class="btn btn-info" role="button" href="/${page}/newBrand">Add new brand</a></div>
                     </div>
 
                     <div class="panel panel-info">
@@ -88,16 +88,16 @@
                                     <td class="seats">${model.seats}</td>
                                     <td class="maximum-speed">${model.maximumSpeed}</td>
                                     <td>
-                                        <a href="/${instrument}/edit-model/${model.idModel}">Edit</a>
+                                        <a href="/${page}/edit-model/${model.idModel}">Edit</a>
                                         &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="/${instrument}/delete-model/${model.idModel}">Delete</a>
+                                        <a href="/${page}/delete-model/${model.idModel}">Delete</a>
                                     </td>
 
                                 </tr>
                             </c:forEach>
                             </tbody>
                         </table>
-                        <div class="panel-footer"><a class="btn btn-info" role="button" href="/${instrument}/newModel">Add new model &raquo</a></div>
+                        <div class="panel-footer"><a class="btn btn-info" role="button" href="/${page}/newModel">Add new agent</a></div>
                     </div>
                 </div>
             </div>
