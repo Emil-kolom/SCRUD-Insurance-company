@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "branch_office")
 @NamedQuery(name = "insurance_type.findAll", query = "select c from BranchOfficeModel c")
-public class BranchOfficeModel implements Serializable{
+public class BranchOfficeModel implements Model, Serializable{
     @Id
     //не допускает пустые значения, но может быть пуст
     @NotNull

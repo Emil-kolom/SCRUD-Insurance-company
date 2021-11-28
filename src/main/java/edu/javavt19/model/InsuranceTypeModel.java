@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "insurance_type")
 @NamedQuery(name = "insurance_type.findAll", query = "select c from InsuranceTypeModel c")
-public class InsuranceTypeModel implements Serializable {
+public class InsuranceTypeModel implements Model, Serializable {
     @Id
     @NotNull
     @GeneratedValue(strategy= GenerationType.AUTO)
