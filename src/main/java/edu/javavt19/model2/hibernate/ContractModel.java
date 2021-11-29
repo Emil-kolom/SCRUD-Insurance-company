@@ -1,17 +1,15 @@
-package edu.javavt19.model;
+package edu.javavt19.model2.hibernate;
 
-import org.hibernate.annotations.Cascade;
+import edu.javavt19.model2.Model;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "contract")
-@NamedQuery(name = "insurance_type.findAll", query = "select c from BranchOfficeModel c")
+@NamedQuery(name = "ContractModel.findAll", query = "select b from ContractModel b")
 public class ContractModel implements Model, Serializable {
     @Id
     @NotNull

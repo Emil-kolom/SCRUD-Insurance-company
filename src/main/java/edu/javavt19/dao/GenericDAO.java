@@ -1,6 +1,6 @@
 package edu.javavt19.dao;
 
-import edu.javavt19.model.Model;
+import edu.javavt19.model2.Model;
 import java.util.List;
 
 public interface GenericDAO<M extends Model> {

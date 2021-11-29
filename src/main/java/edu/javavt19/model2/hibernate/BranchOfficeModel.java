@@ -1,4 +1,6 @@
-package edu.javavt19.model;
+package edu.javavt19.model2.hibernate;
+
+import edu.javavt19.model2.Model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -8,7 +10,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "branch_office")
-@NamedQuery(name = "insurance_type.findAll", query = "select c from BranchOfficeModel c")
+@NamedQuery(name = "BranchOfficeModel.findAll", query = "select a from BranchOfficeModel a")
 public class BranchOfficeModel implements Model, Serializable{
     @Id
     //не допускает пустые значения, но может быть пуст

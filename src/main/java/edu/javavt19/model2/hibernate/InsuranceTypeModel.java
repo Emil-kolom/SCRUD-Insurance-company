@@ -1,4 +1,6 @@
-package edu.javavt19.model;
+package edu.javavt19.model2.hibernate;
+
+import edu.javavt19.model2.Model;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -8,7 +10,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "insurance_type")
-@NamedQuery(name = "insurance_type.findAll", query = "select c from InsuranceTypeModel c")
+@NamedQuery(name = "InsuranceTypeModel.findAll", query = "select d from InsuranceTypeModel d")
 public class InsuranceTypeModel implements Model, Serializable {
     @Id
     @NotNull

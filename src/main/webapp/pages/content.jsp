@@ -30,76 +30,9 @@
                     <a class="btn btn-primary" role="button" href="/${page}/pdfReport?view=pdfView" target="_blank">Download PDF report</a>
                     <a class="btn btn-primary" role="button" href="/${page}/xlsxReport.xlsx?view=excelView" target="_blank">Download Excel report</a>
                 </div>
-                <div class="card-body">
-                    <div class="panel panel-info">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">
-                            <div class="text-center"><h3>Brands</h3></div>
-                        </div>
-                        <table class="table table-striped table-condensed" id="car-brands">
-                            <thead>
-                            <th><button class="sort" data-sort="brand-name">brand</button></th>
-                            <th><button class="sort" data-sort="founded-year">founded</button></th>
-                            <th><button class="sort" data-sort="headquarter">headquarter</button></th>
-                            <th>action</th>
-                            </thead>
-                            <tbody align="center" class="list">
-                            <c:forEach var="brand" items="${listCarBrand}" varStatus="status">
-                                <tr>
-                                    <td class="brand-name">${brand.name}</td>
-                                    <td class="founded-year">${brand.foundedYear}</td>
-                                    <td class="headquarter">${brand.headquarter}</td>
-                                    <td class="action">
-                                        <a href="/${page}/edit-brand/${brand.idBrand}">Edit</a>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="/${page}/delete-brand/${brand.idBrand}">Delete</a>
-                                    </td>
-                                </tr>
-                            </c:forEach>
-                            </tbody>
-                        </table>
-                        <div class="panel-footer"><a class="btn btn-info" role="button" href="/${page}/newBrand">Add new brand</a></div>
-                    </div>
-
-                    <div class="panel panel-info">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading">
-                            <div class="text-center"><h3>Models</h3></div>
-                        </div>
-                        <table class="table table-striped table-condensed" id="car-models">
-                            <thead>
-                            <th><button class="sort" data-sort="brand-name">brand</button></th>
-                            <th><button class="sort" data-sort="model-name">model</button></th>
-                            <th><button class="sort" data-sort="generation">generation</button></th>
-                            <th><button class="sort" data-sort="production-year">produced</button></th>
-                            <th><button class="sort" data-sort="doors">doors</button></th>
-                            <th><button class="sort" data-sort="seats">seats</button></th>
-                            <th><button class="sort" data-sort="maximum-speed">max speed</button></th>
-                            <th>action</th>
-                            </thead>
-                            <tbody align="center" class="list">
-                            <c:forEach var="model" items="${listCarModel}" varStatus="status">
-                                <tr>
-                                    <td class="brand-name">${model.carBrand.name}</td>
-                                    <td class="model-name">${model.modelName}</td>
-                                    <td class="generation">${model.generation}</td>
-                                    <td class="production-year">${model.productionYear}</td>
-                                    <td class="doors">${model.doors}</td>
-                                    <td class="seats">${model.seats}</td>
-                                    <td class="maximum-speed">${model.maximumSpeed}</td>
-                                    <td>
-                                        <a href="/${page}/edit-model/${model.idModel}">Edit</a>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;
-                                        <a href="/${page}/delete-model/${model.idModel}">Delete</a>
-                                    </td>
-
-                                </tr>
-                            </c:forEach>
-                            </tbody>
-                        </table>
-                        <div class="panel-footer"><a class="btn btn-info" role="button" href="/${page}/newModel">Add new agent</a></div>
-                    </div>
-                </div>
+                <%--Таблицу отдельно в page_component--%>
+                <c:import url="page_components/${page}_table.jsp"></c:import>
+                <%-- --%>
             </div>
         </div>
     </div>

@@ -2,10 +2,10 @@ package edu.javavt19.config;
 
 import edu.javavt19.dao.*;
 import edu.javavt19.dao.hibernate.*;
-import edu.javavt19.model.AgentModel;
-import edu.javavt19.model.BranchOfficeModel;
-import edu.javavt19.model.ContractModel;
-import edu.javavt19.model.InsuranceTypeModel;
+import edu.javavt19.model2.hibernate.AgentModel;
+import edu.javavt19.model2.hibernate.BranchOfficeModel;
+import edu.javavt19.model2.hibernate.ContractModel;
+import edu.javavt19.model2.hibernate.InsuranceTypeModel;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.*;
@@ -28,7 +28,7 @@ public class HibernateConfig {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource);
-        sessionFactory.setPackagesToScan(new String[] { "edu.javavt19.model.hibernate" });
+        sessionFactory.setPackagesToScan(new String[] { "edu.javavt19.model2.hibernate" });
         return sessionFactory;
     }
 

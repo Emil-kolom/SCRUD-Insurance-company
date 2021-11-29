@@ -1,9 +1,11 @@
 package edu.javavt19.controllers;
 
 import edu.javavt19.dao.hibernate.GenericHibernateImpl;
-import edu.javavt19.model.InsuranceTypeModel;
-import edu.javavt19.model.TypeOfModel;
+import edu.javavt19.model2.hibernate.InsuranceTypeModel;
+import edu.javavt19.model2.TypeOfModel;
+import edu.javavt19.service.GenericService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,11 +16,12 @@ import java.util.List;
 
 @Controller
 public class InsuranceTypeController {
-    private static final String PAGE = "insurance";
+    private static final String PAGE = "insurance_type";
     private static final String TITLE = "Types of insurance";
 
     @Autowired
-    private GenericHibernateImpl<InsuranceTypeModel> insuranceService;
+    @Qualifier("typeService")
+    private GenericService<InsuranceTypeModel> insuranceService;
 
     // через знак вопроса, в url передаётся параметр в функцию
     @RequestMapping(value = {"/"+PAGE+"/pdfReport", "/"+PAGE+"/xlsxReport.xlsx"}, method = RequestMethod.GET)

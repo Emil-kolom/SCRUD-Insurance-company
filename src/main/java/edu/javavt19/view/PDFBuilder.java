@@ -8,7 +8,11 @@ import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
-import edu.javavt19.model.*;
+import edu.javavt19.model2.*;
+import edu.javavt19.model2.hibernate.AgentModel;
+import edu.javavt19.model2.hibernate.BranchOfficeModel;
+import edu.javavt19.model2.hibernate.ContractModel;
+import edu.javavt19.model2.hibernate.InsuranceTypeModel;
 
 public class PDFBuilder extends AbstractTextPdfView {
 

@@ -1,9 +1,11 @@
 package edu.javavt19.controllers;
 
 import edu.javavt19.dao.hibernate.GenericHibernateImpl;
-import edu.javavt19.model.BranchOfficeModel;
-import edu.javavt19.model.TypeOfModel;
+import edu.javavt19.model2.hibernate.BranchOfficeModel;
+import edu.javavt19.model2.TypeOfModel;
+import edu.javavt19.service.GenericService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,7 +20,8 @@ public class BranchOfficeController {
     private static final String TITLE = "Branch offices";
 
     @Autowired
-    private GenericHibernateImpl<BranchOfficeModel> branchOfficeService;
+    @Qualifier("branchService")
+    private GenericService<BranchOfficeModel> branchOfficeService;
 
     // через знак вопроса, в url передаётся параметр в функцию
     @RequestMapping(value = {"/"+PAGE+"/pdfReport", "/"+PAGE+"/xlsxReport.xlsx"}, method = RequestMethod.GET)
