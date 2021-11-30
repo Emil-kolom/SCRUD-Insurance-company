@@ -1,6 +1,7 @@
 package edu.javavt19.controllers;
 
 import edu.javavt19.dao.hibernate.GenericHibernateImpl;
+import edu.javavt19.model2.hibernate.AgentModel;
 import edu.javavt19.model2.hibernate.BranchOfficeModel;
 import edu.javavt19.model2.TypeOfModel;
 import edu.javavt19.model2.hibernate.ContractModel;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -36,7 +38,45 @@ public class BranchOfficeController {
         return "/content";
     }
 
-    // через знак вопроса, в url передаётся параметр в функцию
+    @RequestMapping(value = "/"+PAGE+"/newBranch", method = RequestMethod.GET)
+    public String addBranch(ModelMap model) {
+        model.addAttribute("title", TITLE);
+        model.addAttribute("action", "Add a new");
+
+        BranchOfficeModel branch = new BranchOfficeModel();
+
+        model.addAttribute("branch", branch);
+        return "/branchForm";
+    }
+
+    @RequestMapping(value = { "/"+PAGE+"/newAgent" }, method = RequestMethod.POST)
+    public String saveBranch(BranchOfficeModel branch) {
+        branchOfficeService.saveOrUpdate(branch);
+        return "redirect:/"+PAGE;
+    }
+
+    @RequestMapping(value = {  "/"+PAGE+"/edit-branch/{id}" }, method = RequestMethod.GET)
+    public String editBranch(@PathVariable int id, ModelMap model) {
+        model.addAttribute("title", TITLE);
+        model.addAttribute("action", "Edit");
+
+        BranchOfficeModel branch = branchOfficeService.get(id);
+        model.addAttribute("branch", branch);
+        return "/branchForm";
+    }
+
+    @RequestMapping(value = {  "/"+PAGE+"/edit-branch/{id}" }, method = RequestMethod.POST)
+    public String updateBranch(BranchOfficeModel branch) {
+        branchOfficeService.saveOrUpdate(branch);
+        return "redirect:/"+PAGE;
+    }
+
+    @RequestMapping(value = { "/"+PAGE+"/delete-branch/{id}" }, method = RequestMethod.GET)
+    public String deleteBranch(@PathVariable int id) {
+        branchOfficeService.delete(id);
+        return "redirect:/"+PAGE;
+    }
+
     @RequestMapping(value = {"/"+PAGE+"/pdfReport", "/"+PAGE+"/xlsxReport.xlsx"}, method = RequestMethod.GET)
     public ModelAndView downloadReport(@RequestParam("view") String view) {
         ModelAndView modelAndView = new ModelAndView();
@@ -50,5 +90,4 @@ public class BranchOfficeController {
 
         return modelAndView;
     }
-
 }

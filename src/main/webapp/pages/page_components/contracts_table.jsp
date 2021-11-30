@@ -32,9 +32,9 @@
                     <td class="agent-surname">${contract.agent.secondName}</td>
                     <td class="branch">${contract.agent.officeModel.name}</td>
                     <td class="action">
-                        <a href="/${page}/edit-brand/${contract.id}">Edit</a>
+                        <a href="/${page}/edit-contract/${contract.id}">Edit</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/${page}/delete-brand/${contract.id}">Delete</a>
+                        <a href="/${page}/delete-contract/${contract.id}">Delete</a>
                     </td>
                 </tr>
             </c:forEach>

@@ -13,7 +13,8 @@ import java.time.LocalDate;
 public class ContractModel implements Model, Serializable {
     @Id
     @NotNull
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column
     private int id;
 
     @NotNull

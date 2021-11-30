@@ -23,9 +23,9 @@
                     <td class="name">${typeInsurance.name}</td>
                     <td class="agent-percentage">${typeInsurance.agent_percentage}</td>
                     <td class="action">
-                        <a href="/${page}/edit-brand/${typeInsurance.id}">Edit</a>
+                        <a href="/${page}/edit-type/${typeInsurance.id}">Edit</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/${page}/delete-brand/${typeInsurance.id}">Delete</a>
+                        <a href="/${page}/delete-type/${typeInsurance.id}">Delete</a>
                     </td>
                 </tr>
             </c:forEach>

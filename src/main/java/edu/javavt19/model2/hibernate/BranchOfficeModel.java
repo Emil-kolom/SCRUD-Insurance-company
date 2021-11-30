@@ -15,7 +15,8 @@ public class BranchOfficeModel implements Model, Serializable{
     @Id
     //не допускает пустые значения, но может быть пуст
     @NotNull
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column
     private int id;
 
     @NotEmpty

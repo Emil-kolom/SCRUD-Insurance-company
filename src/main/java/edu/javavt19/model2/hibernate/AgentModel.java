@@ -14,7 +14,8 @@ import java.io.Serializable;
 public class AgentModel implements Model, Serializable {
     @Id
     @NotNull
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column
     private int id;
 
     @Size(max=256)

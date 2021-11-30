@@ -14,7 +14,8 @@ import javax.validation.constraints.Size;
 public class InsuranceTypeModel implements Model, Serializable {
     @Id
     @NotNull
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column
     private int id;
 
     @NotEmpty

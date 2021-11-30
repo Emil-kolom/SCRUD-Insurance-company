@@ -20,12 +20,12 @@
             <div class="cols">
                 <div class="row">
                     <div class="col-md">
-                        <img class="img-rounded" src="/resources/img/hiber.png" alt="hibernate logo" width="140" height="140">
+                        <img class="img-rounded" src="/resources/img/contract.png" alt="hibernate logo" width="140" height="140">
                         <p>Main table containing all insurance contracts of the company.</p>
                         <p><a class="btn btn-primary" href="/contracts" role="button">View contracts</a></p>
                     </div>
                     <div class="col-md">
-                        <img class="img-rounded" src="/resources/img/hiber.png" alt="hibernate logo" width="140" height="140">
+                        <img class="img-rounded" src="/resources/img/agent.png" alt="hibernate logo" width="140" height="140">
                         <p>A table containing a list of all insurance agents working for the company.</p>
                         <p><a class="btn btn-primary" href="/agents" role="button" >View agents</a></p>
                     </div>

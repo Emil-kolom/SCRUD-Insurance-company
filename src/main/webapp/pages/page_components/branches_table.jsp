@@ -25,9 +25,9 @@
                     <td class="address">${branch.address}</td>
                     <td class="phone-number">${branch.phoneNumber}</td>
                     <td class="action">
-                        <a href="/${page}/edit-brand/${branch.id}">Edit</a>
+                        <a href="/${page}/edit-branch/${branch.id}">Edit</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/${page}/delete-brand/${branch.id}">Delete</a>
+                        <a href="/${page}/delete-branch/${branch.id}">Delete</a>
                     </td>
                 </tr>
             </c:forEach>

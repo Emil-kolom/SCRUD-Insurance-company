@@ -32,14 +32,17 @@
                     <td class="phoneNumber">${agent.phoneNumber}</td>
                     <td class="branch-name">${agent.officeModel.name}</td>
                     <td class="action">
-                        <a href="/${page}/edit-brand/${agent.id}">Edit</a>
+                        <a href="/${page}/edit-agent/${agent.id}">Edit</a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="/${page}/delete-brand/${agent.id}">Delete</a>
+                        <a href="/${page}/delete-agent/${agent.id}">Delete</a>
                     </td>
                 </tr>
             </c:forEach>
             </tbody>
         </table>
-        <div class="card-footer"><a class="btn btn-info" role="button" href="/${page}/newAgent">Add new agent</a></div>
+        <div class="card-footer">
+            <a class="btn btn-info" role="button" href="/${page}/newAgent">Add new agent</a>
+            <a class="btn" role="button", href="/${page}/getSalary">Get salary</a>
+        </div>
     </div>
 </div>
