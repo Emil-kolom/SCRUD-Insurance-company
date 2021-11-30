@@ -49,7 +49,7 @@ public class BranchOfficeController {
         return "/branchForm";
     }
 
-    @RequestMapping(value = { "/"+PAGE+"/newAgent" }, method = RequestMethod.POST)
+    @RequestMapping(value = { "/"+PAGE+"/newBranch" }, method = RequestMethod.POST)
     public String saveBranch(BranchOfficeModel branch) {
         branchOfficeService.saveOrUpdate(branch);
         return "redirect:/"+PAGE;
