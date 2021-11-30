@@ -25,10 +25,10 @@ public class ContractModel implements Model, Serializable {
     private int sum_insured;
 
     @Column(insertable = false, updatable = false)
-    private int insured_type;
+    private int insurance_type;
 
     @ManyToOne //CASCADE - ....
-    @JoinColumn(name = "insured_type")
+    @JoinColumn(name = "insurance_type")
     private InsuranceTypeModel insurance_type_model;
 
     @NotNull
@@ -58,12 +58,12 @@ public class ContractModel implements Model, Serializable {
         this.sum_insured = sum_insured;
     }
 
-    public int getInsured_type() {
-        return insured_type;
+    public int getInsurance_type() {
+        return insurance_type;
     }
 
-    public void setInsured_type(int insured_type) {
-        this.insured_type = insured_type;
+    public void setInsurance_type(int insured_type) {
+        this.insurance_type = insured_type;
     }
 
     public InsuranceTypeModel getInsurance_type_model() {
@@ -112,7 +112,7 @@ public class ContractModel implements Model, Serializable {
                 "id=" + id +
                 ", date=" + date +
                 ", sum_insured=" + sum_insured +
-                ", insured_type=" + insured_type +
+                ", insured_type=" + insurance_type +
                 ", insurance_type_name=" + insurance_type_model.getName() +
                 ", tariff_rate=" + tariff_rate +
                 ", agent_id=" + agent_id +

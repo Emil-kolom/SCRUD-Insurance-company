@@ -2,14 +2,14 @@
   Created by IntelliJ IDEA.
   User: emil
   Date: 29.11.2021
-  Time: 09:42
+  Time: 09:52
   To change this template use File | Settings | File Templates.
   id атрибут для сортировки
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="card-body">
-    <div class="card bg-info text-dark">
+    <div class="card text-dark">
         <table class="table table-striped table-sm table-hover" id="agent">
             <thead>
             <th><button class="sort" data-sort="id">ID</button></th>

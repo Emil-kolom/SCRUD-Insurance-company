@@ -37,7 +37,7 @@
                     <div class="col-md">
                         <img class="img-rounded" src="/resources/img/type_insurance.jpg" alt="Type insurance img" width="140" height="140">
                         <p>A table containing the types of insurance provided by the company.</p>
-                        <p><a class="btn btn-primary" href="/type" role="button"  >View types of insurance</a></p>
+                        <p><a class="btn btn-primary" href="/types" role="button"  >View types of insurance</a></p>
                     </div>
                 </div>
             </div>

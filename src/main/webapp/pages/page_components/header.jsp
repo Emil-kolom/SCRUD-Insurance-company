@@ -8,7 +8,7 @@
                     <li><a href="/contracts" class="nav-link px-2 link-dark">Contracts</a></li>
                     <li><a href="/agents" class="nav-link px-2 link-dark">Agents</a></li>
                     <li><a href="/branches" class="nav-link px-2 link-dark">Branches</a></li>
-                    <li><a href="/type" class="nav-link px-2 link-dark">Types of insurance</a></li>
+                    <li><a href="/types" class="nav-link px-2 link-dark">Types of insurance</a></li>
                 </ul>
             </div>
         </div>
