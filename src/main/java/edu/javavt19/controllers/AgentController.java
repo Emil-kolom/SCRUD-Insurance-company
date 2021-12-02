@@ -4,6 +4,7 @@ import edu.javavt19.dao.hibernate.GenericHibernateImpl;
 import edu.javavt19.model2.hibernate.AgentModel;
 import edu.javavt19.model2.TypeOfModel;
 import edu.javavt19.model2.hibernate.BranchOfficeModel;
+import edu.javavt19.service.AgentService;
 import edu.javavt19.service.GenericService;
 import edu.javavt19.service.hibernate.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.swing.*;
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 /*
 * TODO ДОБАВИТЬ РАСЧЕТ ЗАРПЛАТЫ
 * */
@@ -29,7 +33,7 @@ public class AgentController {
 
     @Autowired
     @Qualifier("agentService")
-    private GenericService<AgentModel> agentService;
+    private AgentService agentService;
 
     @Autowired
     @Qualifier("branchService")
@@ -48,7 +52,6 @@ public class AgentController {
 
     @RequestMapping(value = "/"+PAGE+"/newAgent", method = RequestMethod.GET)
     public String addAgent(ModelMap model) {
-        model.addAttribute("title", TITLE);
         model.addAttribute("action", "Add a new");
 
         AgentModel agent = new AgentModel();
@@ -68,7 +71,6 @@ public class AgentController {
 
     @RequestMapping(value = {  "/"+PAGE+"/edit-agent/{id}" }, method = RequestMethod.GET)
     public String editAgent(@PathVariable int id, ModelMap model) {
-            model.addAttribute("title", TITLE);
             model.addAttribute("action", "Edit");
 
             AgentModel agent = agentService.get(id);
@@ -105,6 +107,17 @@ public class AgentController {
         modelAndView.setViewName(view);
 
         return modelAndView;
+    }
+
+    @RequestMapping(value = "/"+PAGE+"/getSalary", method = RequestMethod.GET)
+    public String getCurSalary(ModelMap model) {
+        model.addAttribute("curMonth", LocalDate.now().getMonth());
+
+        Map<AgentModel, Double> salary = agentService.getSalary(LocalDate.now().getMonth());
+        model.addAttribute("agentSalaryMap", salary);
+       // model.addAttribute("listBranches", branchesList);
+
+        return "/Salary";
     }
 
 }

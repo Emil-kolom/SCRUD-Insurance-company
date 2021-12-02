@@ -60,8 +60,8 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="agent_id" class="col-sm-6 control-label">Branch name:</label>
-                            <div class="col-sm-3">
+                            <label for="agent_id" class="col-sm-10 control-label">Agent name:</label>
+                            <div class="col-sm-6">
                                 <form:select path="agent_id" multiple="false" class="form-control">
                                     <c:forEach var="agent" items="${listAgent}" varStatus="status">
                                         <c:choose>

@@ -11,7 +11,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "agent")
 @NamedQuery(name = "AgentModel.findAll", query="select c from AgentModel c")
-public class AgentModel implements Model, Serializable {
+public class AgentModel implements Model, Serializable , Comparable<AgentModel>{
     @Id
     @NotNull
     @GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -127,5 +127,10 @@ public class AgentModel implements Model, Serializable {
                 ", officeName= "+ officeModel.getName()+
                 ", officeId= " + branch_office_id
                 + "}";
+    }
+
+    @Override
+    public int compareTo(AgentModel o) {
+        return id - o.id;
     }
 }

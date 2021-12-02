@@ -16,10 +16,10 @@
     <script src="<c:url value="${pageContext.request.contextPath}/webjars/bootstrap/5.1.1/js/bootstrap.js"  />"></script>
     <title>CRUD operations</title>
 </head>
-<body>
+    <body>
 <c:import url="page_components/header.jsp"></c:import>
-<div class="container" >
-    <div class="row">
+        <div class="container" >
+        <div class="row">
         <div class="col-lg-6 offset-lg-3">
             <div class="card">
                 <div class="card-header">
@@ -35,6 +35,7 @@
                             <div class="col-sm-4">
                                 <form:input path="name" class="form-control" />
                             </div>
+                        </div>
                         <div class="form-group">
                             <label for="agent_percentage" class="col-sm-3 control-label">Agent percentage:</label>
                             <div class="col-sm-4">
@@ -49,8 +50,8 @@
                     </form:form>
                 </div>
             </div>
+            </div>
         </div>
-    </div>
-</div>
-</body>
+        </div>
+    </body>
 </html>
